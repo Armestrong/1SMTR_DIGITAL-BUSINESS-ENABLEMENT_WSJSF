@@ -9,15 +9,25 @@
 </h:head>
 <h:body>
 	<h:form>
+		<!-- Aqui tras os usuarios Dinamicamente (sem ser chumbado) -->
+
 		<h:selectManyCheckbox value="#{cadastroBean.listaSelecionados2}">
+		
 			<f:selectItems value="#{cadastroBean.usuarios}" var="usuario"
-				itemLabel="#{usuario.nome}" itemValue="#{usuario.nome}" />
+			itemLabel="#{usuario.nome}" itemValue="#{usuario.nome}" />
+			
 		</h:selectManyCheckbox>
 
+
+		<!-- Aqui sao os nomes que apareceram na web mais os valoes dos seus
+		respectivos clicks (mas é estatico) -->
+
 		<h:selectManyCheckbox value="#{cadastroBean.listaSelecionados}">
-			<f:selectItem itemLabel="Teste" itemValue="1" />
-			<f:selectItem itemLabel="Teste2" itemValue="2" />
-			<f:selectItem itemLabel="Teste3" itemValue="3" />
+
+			<f:selectItem itemLabel="1stLugar" itemValue="mod foi o 1st" />
+			<f:selectItem itemLabel="2ndLugar" itemValue="hit foi o 2nd" />
+			<f:selectItem itemLabel="3trLugar" itemValue="davy foi o 3tr" />
+			
 		</h:selectManyCheckbox>
 
 		<h:commandButton action="#{cadastroBean.cadastrar}" value="Cadastrar" />

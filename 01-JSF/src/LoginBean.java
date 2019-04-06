@@ -1,27 +1,27 @@
 import javax.faces.bean.ManagedBean;
 
+
+//NOTACAO
 @ManagedBean
 public class LoginBean {
+	
 	private String login;
 	private String senha;
 	private boolean termo;
 
+	// METODOS
 	public void logar() {
-		if ("rafael".equals(getLogin()) && "123".equals(getSenha())){
+		if ("rafael".equals(getLogin()) && "123".equals(getSenha())) {
 			System.out.println("Usuario logado: " + getLogin());
 			System.out.println(isTermo());
-		}else
+		} else
 			System.out.println("Usuario com senha incorreta");
 	}
-	
-	
 
+	// CONSTRUTORES
 	public LoginBean() {
 		super();
 	}
-
-
-	
 
 	public LoginBean(String login, String senha, boolean termo) {
 		super();
@@ -30,8 +30,7 @@ public class LoginBean {
 		this.termo = termo;
 	}
 
-
-
+	// GETS E SETS
 	public String getLogin() {
 		return login;
 	}
@@ -48,19 +47,12 @@ public class LoginBean {
 		this.senha = senha;
 	}
 
-
-
 	public boolean isTermo() {
 		return termo;
 	}
 
-
-
 	public void setTermo(boolean termo) {
 		this.termo = termo;
 	}
-	
-	
-	
 
 }
