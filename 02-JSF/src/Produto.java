@@ -1,14 +1,26 @@
 
 public class Produto {
 	private String produto;
-	private int id;
-	private int qtd;
+	private String id;
+	private String qtd;
 
 	public Produto() {
 		super();
 	}
 
-	public Produto(String produto, int id, int qtd) {
+	public Produto( String qtd) {
+		super();
+		this.qtd = qtd;
+	}
+	
+	public Produto(String produto, String id) {
+		super();
+		this.produto = produto;
+		this.id = id;
+
+	}
+	
+	public Produto(String produto, String id, String qtd) {
 		super();
 		this.produto = produto;
 		this.id = id;
@@ -23,19 +35,19 @@ public class Produto {
 		this.produto = produto;
 	}
 
-	public int getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
-	public int getQtd() {
+	public String getQtd() {
 		return qtd;
 	}
 
-	public void setQtd(int qtd) {
+	public void setQtd(String qtd) {
 		this.qtd = qtd;
 	}
 
