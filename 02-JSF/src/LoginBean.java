@@ -12,13 +12,17 @@ public class LoginBean {
 	}
 
 
-	public void logar() {
+	public String logar() {
 		if("mod".equals(getLogin()) && "1234".equals(getSenha())) {
 			System.out.println("Usuario logado : " + getLogin());
+			System.out.println("Checkbox Conectado : " + termo);
+			return "carrinho";
 		}else {
 			System.out.println("Usuario nao autorizado");
-		}
 			System.out.println("Checkbox Conectado : " + termo);
+			return "login";
+		}
+			
 	}
 
 	

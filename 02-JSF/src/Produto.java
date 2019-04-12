@@ -1,8 +1,10 @@
+import java.util.List;
 
 public class Produto {
 	private String produto;
 	private String id;
 	private String qtd;
+	
 
 	public Produto() {
 		super();
