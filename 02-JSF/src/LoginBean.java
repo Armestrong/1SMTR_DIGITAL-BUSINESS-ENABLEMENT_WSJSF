@@ -1,4 +1,6 @@
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
 
 @ManagedBean
 public class LoginBean {
@@ -16,9 +18,18 @@ public class LoginBean {
 		if("mod".equals(getLogin()) && "1234".equals(getSenha())) {
 			System.out.println("Usuario logado : " + getLogin());
 			System.out.println("Checkbox Conectado : " + termo);
-			return "carrinho";
+			return "carrinho?faces-redirect=true";
 		}else {
 			System.out.println("Usuario nao autorizado");
+			
+			FacesMessage mensagem = new FacesMessage("Usuário Invalido !");
+			FacesContext.getCurrentInstance().addMessage( null , mensagem);
+			
+			
+			FacesMessage mensagem2 = new FacesMessage("Senha Invalida !");
+			FacesContext.getCurrentInstance().addMessage( null , mensagem2);
+			
+			
 			System.out.println("Checkbox Conectado : " + termo);
 			return "login";
 		}

@@ -6,7 +6,14 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:head>
 	<title>Carrinho - JSF</title>
+	
+	<h:outputScript library="js" name="bootstrap.js" />
+	<h:outputScript library="js" name="jquery.js" />
+	<h:outputStylesheet library="css" name="bootstrap.css" />
 </h:head>
+
+
+
 <h:body>
 	<h:form>
 		<!-- Aqui tras os usuarios Dinamicamente (sem ser chumbado) -->
@@ -25,13 +32,13 @@
 			<f:selectItem itemLabel="3" itemValue="3" />
 			<f:selectItem itemLabel="4" itemValue="4" />
 		</h:selectOneMenu>
-		
+
 		<h:selectOneRadio value="#{carrinhoBean.pagamento}">
-		<f:selectItems value="#{carrinhoBean.formas}" var="forma"
+			<f:selectItems value="#{carrinhoBean.formas}" var="forma"
 				itemLabel="#{forma.nome}" itemValue="#{forma.nome}" />
 		</h:selectOneRadio>
-		
-		
+
+
 
 		<h:commandButton action="#{carrinhoBean.cadastrarCarrinho}" value="OK" />
 	</h:form>

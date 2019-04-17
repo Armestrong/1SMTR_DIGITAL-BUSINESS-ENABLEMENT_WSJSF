@@ -49,6 +49,7 @@ public class CarrinhoBean {
 		
 		
 		System.out.println("Forma de pagamento :" + getPagamento());
+		System.out.println(" -- ");
 		
 	}
 	
